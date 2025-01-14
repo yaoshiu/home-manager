@@ -1,0 +1,8 @@
+{ ... }:
+{
+  imports = [
+    ./ripgrep
+    ./lazygit
+    ./bat
+  ];
+}

@@ -1,0 +1,13 @@
+{
+  "lspconfig": {
+    "nixd": {
+      "nixd": {
+      "options": {
+        "home-manager": {
+          "expr": "(builtins.getFlake \"/home/yaoshiu/.config/home-manager\").homeConfigurations.yaoshiu.options"
+        }
+      }
+    }
+    }
+  }
+}
