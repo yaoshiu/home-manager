@@ -29,7 +29,9 @@
           ];
         };
         completion = {
-          list.selection = "auto_insert";
+          list.selection = {
+            auto_insert = true;
+          };
           documentation.auto_show = true;
         };
       };
