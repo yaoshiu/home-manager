@@ -31,6 +31,7 @@
         completion = {
           list.selection = {
             auto_insert = true;
+            preselect = false;
           };
           documentation.auto_show = true;
         };
