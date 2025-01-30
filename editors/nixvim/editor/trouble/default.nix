@@ -1,8 +1,9 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     plugins.trouble = {
-    enable = true;
+      enable = true;
       lazyLoad.settings.cmd = "Trouble";
-  };
+    };
   };
 }

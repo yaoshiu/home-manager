@@ -1,8 +1,9 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     plugins.ts-autotag = {
-    enable = true;
+      enable = true;
       lazyLoad.settings.event = "InsertEnter";
-  };
+    };
   };
 }

@@ -32,20 +32,23 @@
 
       theme = "tokyonight";
     };
-      
-      languages = {
-        language = [
-          {
-            name = "nix";
-            language-servers = [ "nixd" "nil" ];
-          }
-        ];
 
-        language-server = {
-          nixd = {
-            command = "nixd";
-          };
+    languages = {
+      language = [
+        {
+          name = "nix";
+          language-servers = [
+            "nixd"
+            "nil"
+          ];
+        }
+      ];
+
+      language-server = {
+        nixd = {
+          command = "nixd";
         };
       };
+    };
   };
 }

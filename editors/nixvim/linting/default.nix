@@ -1,8 +1,9 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     plugins.lint = {
-    enable = true;
-    lazyLoad.settings.event = "DeferredUIEnter";
-  };
+      enable = true;
+      lazyLoad.settings.event = "DeferredUIEnter";
+    };
   };
 }

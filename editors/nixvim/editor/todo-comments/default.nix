@@ -1,8 +1,9 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     plugins.todo-comments = {
-    enable = true;
+      enable = true;
       lazyLoad.settings.event = "DeferredUIEnter";
-  };
+    };
   };
 }

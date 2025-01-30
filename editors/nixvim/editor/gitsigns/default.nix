@@ -1,8 +1,9 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     plugins.gitsigns = {
-    enable = true;
+      enable = true;
       lazyLoad.settings.event = "DeferredUIEnter";
-  };
+    };
   };
 }
