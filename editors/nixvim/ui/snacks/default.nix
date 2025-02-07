@@ -13,5 +13,18 @@
         quickfile.enabled = true;
       };
     };
+
+    keymaps = [
+      {
+        action = "<cmd>lua require('snacks').bufdelete()<cr>";
+        key = "<leader>bd";
+        options.desc = "Delete Buffer";
+      }
+      {
+        action = "<cmd>lua require('snacks').bufdelete.others()<cr>";
+        key = "<leader>bo";
+        options.desc = "Delete Other Buffers";
+      }
+    ];
   };
 }

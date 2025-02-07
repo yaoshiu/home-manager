@@ -10,6 +10,7 @@
     ./linting
     ./treesitter
     ./mini.nix
+    ./keymaps.nix
   ];
 
   programs.nixvim = {
