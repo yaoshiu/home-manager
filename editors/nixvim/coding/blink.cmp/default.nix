@@ -4,12 +4,6 @@
     plugins.blink-cmp = {
       enable = true;
 
-      lazyLoad = {
-        settings = {
-          event = "InsertEnter";
-        };
-      };
-
       settings = {
         keymap = {
           preset = "super-tab";
