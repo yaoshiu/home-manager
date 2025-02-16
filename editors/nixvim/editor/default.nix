@@ -8,5 +8,6 @@
     ./todo-comments
     ./telescope
     ./neo-tree
+    ./overseer
   ];
 }
