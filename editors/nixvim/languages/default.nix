@@ -4,5 +4,6 @@
     ./astro
     ./nix
     ./typescript
+    ./svelte
   ];
 }
