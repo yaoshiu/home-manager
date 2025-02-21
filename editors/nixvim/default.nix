@@ -38,16 +38,6 @@
       signcolumn = "yes";
     };
 
-    performance = {
-      byteCompileLua = {
-        enable = true;
-        configs = true;
-        initLua = true;
-        nvimRuntime = true;
-        plugins = true;
-      };
-    };
-
     plugins = {
       lz-n = {
         enable = true;
