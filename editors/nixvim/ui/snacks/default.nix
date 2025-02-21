@@ -11,6 +11,7 @@
         words.enabled = true;
         bigfile.enabled = true;
         quickfile.enabled = true;
+        picker.enabled = true;
       };
     };
 
