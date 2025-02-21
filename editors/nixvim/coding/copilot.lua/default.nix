@@ -7,11 +7,11 @@
       settings = {
         suggestion = {
           enabled = true;
-          autoTrigger = true;
+          auto_trigger = true;
         };
         panel = {
           enabled = true;
-          autoRefresh = true;
+          auto_refresh = true;
         };
       };
     };
