@@ -4,5 +4,6 @@
     ./ripgrep
     ./lazygit
     ./bat
+    ./fd
   ];
 }
