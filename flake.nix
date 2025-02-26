@@ -52,6 +52,7 @@
             ./shells
             ./dev
             ./apps
+            ./fonts
           ];
 
           # Optionally use extraSpecialArgs
