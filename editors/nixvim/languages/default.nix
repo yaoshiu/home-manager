@@ -5,5 +5,6 @@
     ./nix
     ./typescript
     ./svelte
+    ./lua
   ];
 }
