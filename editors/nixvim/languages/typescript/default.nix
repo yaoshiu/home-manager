@@ -6,6 +6,9 @@
         ts_ls = {
           enable = true;
         };
+        denols = {
+          enable = true;
+        };
       };
 
       conform-nvim.settings.formatters_by_ft =
