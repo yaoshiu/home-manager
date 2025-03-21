@@ -6,5 +6,7 @@
     ./typescript
     ./svelte
     ./lua
+    ./python
+    ./rust
   ];
 }
