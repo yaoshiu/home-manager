@@ -4,6 +4,7 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
+    maple-mono.NF
   ];
 
   fonts.fontconfig.enable = true;

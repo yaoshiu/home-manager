@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./coding
@@ -19,6 +19,10 @@
     colorschemes.tokyonight = {
       enable = true;
       lazyLoad.enable = true;
+    };
+
+    clipboard = {
+      providers.wl-copy.enable = true;
     };
 
     globals = {

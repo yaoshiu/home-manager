@@ -5,5 +5,6 @@
     ./lazygit
     ./bat
     ./fd
+    ./ghostty
   ];
 }

@@ -11,7 +11,6 @@
       url = "github:nix-community/nixvim";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
       };
     };
 
@@ -58,6 +57,8 @@
           # Optionally use extraSpecialArgs
           # to pass through arguments to home.nix
         };
+
+      inherit (home-manager) packages;
     }
     // flake-utils.lib.eachDefaultSystem (system: {
       formatter = treefmt-nix.lib.mkWrapper nixpkgs.legacyPackages.${system} {
