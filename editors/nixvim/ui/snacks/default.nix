@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
     plugins.snacks = {
@@ -27,5 +27,7 @@
         options.desc = "Delete Other Buffers";
       }
     ];
+
+    extraPackages = with pkgs; [ imagemagick ];
   };
 }
