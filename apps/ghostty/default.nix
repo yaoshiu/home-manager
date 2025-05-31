@@ -15,6 +15,12 @@
         "cv63"
         "zero"
       ];
+
+      window-padding-x = 16;
+      window-padding-y = 16;
+      window-padding-balance = true;
+
+      mouse-scroll-multiplier = 0.5;
     };
   };
 }
