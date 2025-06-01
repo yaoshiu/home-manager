@@ -2,13 +2,15 @@
 {
   imports = [
     ./coding
+    ./dap
     ./editor
-    ./languages
-    ./lsp
-    ./ui
     ./formatting
+    ./languages
     ./linting
+    ./lsp
+    ./test
     ./treesitter
+    ./ui
     ./mini.nix
     ./keymaps.nix
   ];

@@ -20,6 +20,14 @@
           "<leader>ca" = "code_action";
           "<leader>cr" = "rename";
         };
+        extra = [
+          {
+            mode = "v";
+            key = "<leader>ca";
+            action = "<cmd>lua vim.lsp.buf.code_action()<cr>";
+            options.desc = "Lsp buf code action";
+          }
+        ];
       };
     };
   };

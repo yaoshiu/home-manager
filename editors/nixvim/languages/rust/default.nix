@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
     plugins = {
@@ -27,6 +27,18 @@
           settings.ft = "rust";
         };
       };
+
+      neotest = {
+        settings = {
+          adapters = [
+            "['rustaceanvim.neotest'] = { }"
+          ];
+        };
+      };
     };
+
+    extraPackages = with pkgs; [
+      vscode-extensions.vadimcn.vscode-lldb.adapter
+    ];
   };
 }
