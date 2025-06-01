@@ -23,5 +23,7 @@
     direnv.enable = true;
 
     nix-your-shell.enable = true;
+
+    nix-index.enable = true;
   };
 }
