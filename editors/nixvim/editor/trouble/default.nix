@@ -7,6 +7,11 @@
         cmd = "Trouble";
         keys = [
           {
+            __unkeyed-1 = "<leader>x";
+            __unkeyed-2 = "";
+            desc = "+trouble";
+          }
+          {
             __unkeyed-1 = "<leader>xx";
             __unkeyed-2 = "<cmd>Trouble diagnostics toggle<cr>";
             desc = "Diagnostics";

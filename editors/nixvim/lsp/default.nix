@@ -27,6 +27,19 @@
             action = "<cmd>lua vim.lsp.buf.code_action()<cr>";
             options.desc = "Lsp buf code action";
           }
+          {
+            mode = [
+              "n"
+              "v"
+            ];
+            key = "<leader>c";
+            action = "";
+            options.desc = "+code";
+          }
+          {
+            key = "<leader>cA";
+            action = "<cmd>lua vim.lsp.buf.code_action({ apply = true, context = { only = { 'source' }, diagnostics = {} } })<cr>";
+          }
         ];
       };
     };

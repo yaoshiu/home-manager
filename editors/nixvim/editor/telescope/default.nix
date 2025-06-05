@@ -7,6 +7,16 @@
         cmd = "Telescope";
         keys = [
           {
+            __unkeyed-1 = "<leader>s";
+            __unkeyed-2 = "";
+            desc = "+search";
+          }
+          {
+            __unkeyed-1 = "<leader>f";
+            __unkeyed-2 = "";
+            desc = "+find";
+          }
+          {
             __unkeyed-1 = "<leader>sk";
             __unkeyed-2 = "<cmd>Telescope keymaps<cr>";
             desc = "Key Maps";

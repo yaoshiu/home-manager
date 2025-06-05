@@ -29,6 +29,11 @@
           '';
           keys = [
             {
+              __unkeyed-1 = "<leader>d";
+              __unkeyed-2 = "";
+              desc = "+debug";
+            }
+            {
               __unkeyed-1 = "<leader>dB";
               __unkeyed-2 = "<cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>";
               desc = "Breakpoint Condition";

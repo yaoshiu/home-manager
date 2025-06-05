@@ -22,6 +22,11 @@
           ];
           keys = [
             {
+              __unkeyed-1 = "<leader>o";
+              __unkeyed-2 = "";
+              desc = "+overseer";
+            }
+            {
               __unkeyed-1 = "<leader>ow";
               __unkeyed-2 = "<cmd>OverseerToggle<cr>";
               desc = "Task List";

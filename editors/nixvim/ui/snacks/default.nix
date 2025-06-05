@@ -17,6 +17,11 @@
 
     keymaps = [
       {
+        action = "";
+        key = "<leader>b";
+        options.desc = "+buffer";
+      }
+      {
         action = "<cmd>lua require('snacks').bufdelete()<cr>";
         key = "<leader>bd";
         options.desc = "Delete Buffer";
