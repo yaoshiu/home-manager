@@ -7,5 +7,6 @@
     ./nui
     ./snacks
     ./bufferline
+    ./colorizer
   ];
 }

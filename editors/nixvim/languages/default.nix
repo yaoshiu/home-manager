@@ -8,5 +8,6 @@
     ./lua
     ./python
     ./rust
+    ./tailwindcss
   ];
 }
