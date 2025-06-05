@@ -42,6 +42,7 @@
       smoothscroll = true;
       relativenumber = true;
       signcolumn = "yes";
+      exrc = true;
     };
 
     plugins = {
