@@ -6,7 +6,7 @@
         enable = true;
         lazyLoad = {
           enable = true;
-          settings.event = "BufLoad Cargo.toml";
+          settings.event = "BufRead Cargo.toml";
         };
 
         settings = {
@@ -31,11 +31,23 @@
       neotest = {
         settings = {
           adapters = [
-            "['rustaceanvim.neotest'] = { }"
+            "try_require('rustaceanvim.neotest')"
           ];
         };
       };
+
     };
+
+    extraConfigLua = ''
+      function try_require(module)
+        local ok, result = pcall(require, module)
+        if ok then
+          return result
+        else
+          return nil
+        end
+      end
+    '';
 
     extraPackages = with pkgs; [
       vscode-extensions.vadimcn.vscode-lldb.adapter
