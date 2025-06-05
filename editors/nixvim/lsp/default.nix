@@ -9,6 +9,10 @@
       enable = true;
       inlayHints = true;
 
+      servers = {
+        typos_lsp.enable = true;
+      };
+
       keymaps = {
         lspBuf = {
           K = "hover";
