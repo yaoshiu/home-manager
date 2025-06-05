@@ -35,7 +35,6 @@
           ];
         };
       };
-
     };
 
     extraConfigLua = ''
@@ -51,6 +50,7 @@
 
     extraPackages = with pkgs; [
       vscode-extensions.vadimcn.vscode-lldb.adapter
+      clippy
     ];
   };
 }
