@@ -8,5 +8,6 @@
     ./snacks
     ./bufferline
     ./colorizer
+    ./navic
   ];
 }
