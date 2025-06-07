@@ -2,6 +2,7 @@
 {
   imports = [
     ./ts-autotag
+    ./treesitter-textobjects
   ];
 
   programs.nixvim = {
