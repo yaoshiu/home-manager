@@ -5,7 +5,45 @@
       dap-ui = {
         enable = true;
         lazyLoad.settings = {
-          lazy = true;
+          before = ''
+            function()
+              require('lz.n').trigger_load('nvim-dap')
+            end
+          '';
+          keys = [
+            {
+              __unkeyed-1 = "<leader>du";
+              __unkeyed-2 = "<cmd>lua require('dapui').toggle()<cr>";
+              desc = "Toggle UI";
+            }
+            {
+              __unkeyed-1 = "<leader>de";
+              __unkeyed-2 = "<cmd>lua require('dapui').eval()<cr>";
+              mode = [
+                "n"
+                "v"
+              ];
+              desc = "Evaluate Expression";
+            }
+          ];
+          after = ''
+            function()
+              local dap = require('dap')
+              local dapui = require('dapui')
+
+              dapui.setup()
+
+              dap.listeners.after.event_initialized["dapui_config"] = function()
+                dapui.open()
+              end
+              dap.listeners.before.event_terminated["dapui_config"] = function()
+                dapui.close()
+              end
+              dap.listeners.before.event_exited["dapui_config"] = function()
+                dapui.close()
+              end
+            end
+          '';
         };
       };
 
@@ -19,12 +57,30 @@
       dap = {
         enable = true;
         lazyLoad.settings = {
+          before = ''
+            function()
+              require('lz.n').trigger_load('nvim-dap-virtual-text')
+            end
+          '';
           after = ''
             function()
-              require('lz.n').trigger_load({
-                'dap-ui',
-                'dap-virtual-text',
-              })
+              vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
+              local icon = {
+                Stopped             = { "󰁕 ", "DiagnosticWarn", "DapStoppedLine" },
+                Breakpoint          = " ",
+                BreakpointCondition = " ",
+                BreakpointRejected  = { " ", "DiagnosticError" },
+                LogPoint            = ".>",
+              }
+              for name, sign in pairs(icon) do
+                sign = type(sign) == "table" and sign or { sign }
+                vim.fn.sign_define("Dap" .. name, {
+                  text = sign[1],
+                  texthl = sign[2] or "DiagnosticInfo",
+                  linehl = sign[3],
+                  numhl = sign[3]
+                })
+              end
             end
           '';
           keys = [
@@ -107,6 +163,11 @@
               __unkeyed-1 = "<leader>dt";
               __unkeyed-2 = "<cmd>lua require('dap').terminate()<cr>";
               desc = "Terminate";
+            }
+            {
+              __unkeyed-1 = "<leader>td";
+              __unkeyed-2 = "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>";
+              desc = "Debug Nearest";
             }
           ];
         };
