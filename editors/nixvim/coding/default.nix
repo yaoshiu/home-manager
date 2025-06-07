@@ -5,5 +5,6 @@
     ./mini.pairs
     ./copilot.lua
     ./lazydev
+    ./ts-comments
   ];
 }
