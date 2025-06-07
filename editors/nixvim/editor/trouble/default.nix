@@ -23,6 +23,10 @@
           }
         ];
       };
+
+      settings = {
+        modes.lsp.win.position = "right";
+      };
     };
   };
 }
