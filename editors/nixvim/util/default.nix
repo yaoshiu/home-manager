@@ -3,5 +3,6 @@
   imports = [
     ./persistence
     ./snacks
+    ./hardtime
   ];
 }
