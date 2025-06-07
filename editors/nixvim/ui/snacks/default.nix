@@ -8,10 +8,8 @@
         input.enabled = true;
         notifier.enabled = true;
         scope.enabled = true;
+        statuscolumn.enabled = false;
         words.enabled = true;
-        bigfile.enabled = true;
-        quickfile.enabled = true;
-        picker.enabled = true;
       };
     };
 
