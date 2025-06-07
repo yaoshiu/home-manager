@@ -37,20 +37,8 @@
       };
     };
 
-    extraConfigLua = ''
-      function try_require(module)
-        local ok, result = pcall(require, module)
-        if ok then
-          return result
-        else
-          return nil
-        end
-      end
-    '';
-
     extraPackages = with pkgs; [
       vscode-extensions.vadimcn.vscode-lldb.adapter
-      clippy
     ];
   };
 }
