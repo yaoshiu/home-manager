@@ -14,6 +14,13 @@ in
           output = {
             open_on_run = true;
           };
+          quickfix = {
+            open.__raw = ''
+              function()
+                require("trouble").open({ mode = "quickfix", focus = false })
+              end
+            '';
+          };
         };
         lazyLoad.settings = {
           after.__raw = ''
