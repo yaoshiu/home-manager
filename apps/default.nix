@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./rclone
     ./ripgrep
     ./lazygit
     ./bat
