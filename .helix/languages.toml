@@ -1,0 +1,2 @@
+[language-server.nixd.config.options]
+"home-manager" = { expr = "(builtins.getFlake (builtins.toString ./.)).homeConfigurations.huangyifei.options" }
