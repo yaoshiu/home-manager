@@ -4,7 +4,7 @@
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = "nord";
+      theme = "gruvbox-material";
       editor = {
         bufferline = "multiple";
         line-number = "relative";

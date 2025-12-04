@@ -3,7 +3,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "nord";
+      theme = "Gruvbox Material Dark";
       font-size = 14;
       font-family = "Hack Nerd Font Mono";
       window-padding-x = 16;
