@@ -32,7 +32,7 @@
       shellcheck
       dockerfile-language-server
       rust-analyzer
-      haskell-haskell-language-server
+      haskell-language-server
     ];
   };
 }
