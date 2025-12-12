@@ -21,6 +21,14 @@
       };
     };
 
+    languages = {
+      language-server = {
+        haskell-language-server.config = {
+          haskell.plugin.hlint.diagnosticsOn = false;
+        };
+      };
+    };
+
     extraPackages = with pkgs; [
       nixd
       nixfmt

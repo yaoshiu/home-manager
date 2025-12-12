@@ -2,6 +2,7 @@
 {
   imports = [
     # ./vivid
+    ./git
     ./just
     ./direnv
     ./eza
