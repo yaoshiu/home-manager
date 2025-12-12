@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./vivid
+    # ./vivid
     ./just
     ./direnv
     ./eza

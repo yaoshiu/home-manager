@@ -31,6 +31,8 @@
       shfmt
       shellcheck
       dockerfile-language-server
+      rust-analyzer
+      haskell-haskell-language-server
     ];
   };
 }

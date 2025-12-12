@@ -2,6 +2,6 @@
 {
   programs.vivid = {
     enable = true;
-    activeTheme = "nord";
+    activeTheme = "gruvbox-dark-soft";
   };
 }
