@@ -30,6 +30,7 @@
     };
 
     extraPackages = with pkgs; [
+      clang-tools
       nixd
       nixfmt
       tombi

@@ -17,6 +17,7 @@
 
   outputs =
     {
+      nixpkgs,
       flake-parts,
       home-manager,
       treefmt-nix,
@@ -32,24 +33,49 @@
 
         systems = [
           "aarch64-darwin"
+          "x86_64-linux"
         ];
 
         flake = {
-          homeConfigurations = {
-            macos = withSystem "aarch64-darwin" (
-              { pkgs, ... }:
-              home-manager.lib.homeManagerConfiguration {
-                inherit pkgs;
-                modules = [
-                  ./home.nix
-                  ./tools
-                  ./shells
-                  ./editors
-                  ./applications
-                ];
-              }
-            );
-          };
+          homeConfigurations =
+            let
+              common = [
+                ./tools
+                ./shells
+                ./editors
+
+                (
+                  { pkgs, ... }:
+                  {
+                    nix = {
+                      package = pkgs.nix;
+                      gc.automatic = true;
+                    };
+                  }
+                )
+              ];
+            in
+            {
+              macos = withSystem "aarch64-darwin" (
+                { pkgs, ... }:
+                home-manager.lib.homeManagerConfiguration {
+                  inherit pkgs;
+                  modules = common ++ [
+                    ./macos.nix
+                  ];
+                }
+              );
+
+              wsl = withSystem "x86_64-linux" (
+                { pkgs, ... }:
+                home-manager.lib.homeManagerConfiguration {
+                  inherit pkgs;
+                  modules = common ++ [
+                    ./wsl.nix
+                  ];
+                }
+              );
+            };
         };
 
         perSystem = {
