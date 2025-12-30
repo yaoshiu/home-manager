@@ -2,12 +2,13 @@
 {
   imports = [
     # ./vivid
-    ./git
-    ./just
+    ./bat
     ./direnv
     ./eza
     ./fd
     ./fzf
+    ./git
+    ./just
     ./lazygit
     ./mosh
     ./ripgrep

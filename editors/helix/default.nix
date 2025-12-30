@@ -24,7 +24,10 @@
     languages = {
       language-server = {
         haskell-language-server.config = {
-          haskell.plugin.hlint.diagnosticsOn = false;
+          haskell = {
+            sessionLoading = "multipleComponents";
+            plugin.hlint.diagnosticsOn = false;
+          };
         };
       };
     };
