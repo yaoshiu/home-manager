@@ -45,6 +45,8 @@
       dockerfile-language-server
       rust-analyzer
       haskell-language-server
+      ty
+      ruff
     ];
   };
 }
