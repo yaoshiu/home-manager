@@ -2,6 +2,8 @@
 {
   imports = [
     # ./vivid
+    ./ansible
+    ./xh
     ./bat
     ./direnv
     ./eza
