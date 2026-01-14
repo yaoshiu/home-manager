@@ -3,6 +3,7 @@
   imports = [
     # ./vivid
     ./ansible
+    ./bottom
     ./xh
     ./bat
     ./direnv

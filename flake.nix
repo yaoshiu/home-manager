@@ -48,6 +48,9 @@
                   { pkgs, ... }:
                   {
                     nix = {
+                      channels = {
+                        inherit nixpkgs;
+                      };
                       package = pkgs.nix;
                       gc.automatic = true;
                       settings = {
