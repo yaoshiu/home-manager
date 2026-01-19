@@ -21,33 +21,12 @@
       };
     };
 
-    languages = {
-      language-server = {
-        haskell-language-server.config = {
-          haskell = {
-            sessionLoading = "multipleComponents";
-            plugin.hlint.diagnosticsOn = false;
-          };
-        };
-      };
-    };
-
     extraPackages = with pkgs; [
-      clang-tools
-      lldb
       nixd
       nixfmt
-      tombi
-      taplo
-      typescript-language-server
       bash-language-server
       shfmt
       shellcheck
-      dockerfile-language-server
-      rust-analyzer
-      haskell-language-server
-      ty
-      ruff
     ];
   };
 }
