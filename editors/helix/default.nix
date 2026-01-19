@@ -34,6 +34,7 @@
 
     extraPackages = with pkgs; [
       clang-tools
+      lldb
       nixd
       nixfmt
       tombi
