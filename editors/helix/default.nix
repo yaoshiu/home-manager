@@ -27,6 +27,10 @@
       bash-language-server
       shfmt
       shellcheck
+      vscode-json-languageserver
+      taplo
+      tombi
+      fish-lsp
     ];
   };
 }
