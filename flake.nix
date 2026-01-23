@@ -54,7 +54,10 @@
                       package = pkgs.nix;
                       gc.automatic = true;
                       settings = {
-                        experimental-features = [ "nix-command" "flakes" ];
+                        experimental-features = [
+                          "nix-command"
+                          "flakes"
+                        ];
                       };
                     };
                   }
@@ -67,6 +70,7 @@
                 home-manager.lib.homeManagerConfiguration {
                   inherit pkgs;
                   modules = common ++ [
+                    ./applications
                     ./macos.nix
                   ];
                 }
