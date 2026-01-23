@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    # ./vivid
     ./ansible
     ./bottom
     ./xh

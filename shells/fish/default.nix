@@ -1,4 +1,5 @@
-{ lib, ... }: {
+{ lib, ... }:
+{
   programs.fish = {
     enable = true;
     preferAbbrs = true;
