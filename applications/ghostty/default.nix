@@ -1,10 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.ghostty = {
     enable = true;
-    package = pkgs.ghostty-bin;
+    package = if pkgs.hostPlatform.isDarwin then pkgs.ghostty-bin else pkgs.ghostty;
     settings = {
       font-size = 14;
       font-family = "Hack Nerd Font Mono";
+      command = "direct:zsh -lic fish";
       theme = "Gruvbox Material Dark";
       window-padding-x = 16;
       window-padding-y = 16;
