@@ -2,7 +2,7 @@
 {
   programs.ghostty = {
     enable = true;
-    package = if pkgs.hostPlatform.isDarwin then pkgs.ghostty-bin else pkgs.ghostty;
+    package = if pkgs.stdenv.isDarwin then pkgs.ghostty-bin else pkgs.ghostty;
     settings = {
       font-size = 14;
       font-family = "Hack Nerd Font Mono";

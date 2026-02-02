@@ -31,6 +31,7 @@
       taplo
       tombi
       fish-lsp
+      yaml-language-server
     ];
   };
 }
