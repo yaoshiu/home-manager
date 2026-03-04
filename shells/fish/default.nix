@@ -1,8 +1,11 @@
-{ lib, ... }:
+{ ... }:
 {
   programs.fish = {
     enable = true;
     preferAbbrs = true;
+    shellAbbrs = {
+      cmd = "command";
+    };
     functions = {
       fish_greeting = "";
     };
