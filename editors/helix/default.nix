@@ -4,7 +4,10 @@
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = "gruvbox-material";
+      theme = {
+        light = "solarized_light";
+        dark = "solarized_dark";
+      };
       editor = {
         bufferline = "multiple";
         line-number = "relative";

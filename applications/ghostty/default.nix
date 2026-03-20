@@ -7,7 +7,7 @@
       font-size = 14;
       font-family = "Hack Nerd Font Mono";
       command = "direct:zsh -lic fish";
-      theme = "Gruvbox Material Dark";
+      theme = "light:iTerm2 Solarized Light,dark:iTerm2 Solarized Dark";
       window-padding-x = 16;
       window-padding-y = 16;
       window-padding-balance = true;
