@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./nix
     ./ansible
     ./bottom
     ./xh
