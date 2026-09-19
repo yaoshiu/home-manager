@@ -5,6 +5,18 @@ return {
 		"https://github.com/folke/which-key.nvim",
 	},
 	config = function()
-		require("which-key").setup()
+		local wk = require("which-key")
+		wk.setup()
+
+		wk.add({
+			{ "<leader>f", group = "Telescope" },
+			{
+				"<leader>?",
+				function()
+					wk.show({ global = false })
+				end,
+				desc = "Buffer local keymaps (which-key)",
+			},
+		})
 	end,
 }

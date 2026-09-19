@@ -13,7 +13,10 @@ local plugins = {
 	require("plugins.mini-surround"),
 	require("plugins.gitsigns"),
 	require("plugins.flash"),
-    require("plugins.toggleterm")
+	require("plugins.toggleterm"),
+	require("plugins.fidget"),
+	require("plugins.lsp_signature"),
+	require("plugins.lualine"),
 }
 
 local builds = {}

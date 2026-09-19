@@ -40,3 +40,12 @@ vim.keymap.set("n", "<leader>q", "<Cmd>bp | bd #<CR>", { desc = "Close current b
 vim.keymap.set("n", "<leader>F", function()
 	vim.lsp.buf.format({ async = true })
 end, { desc = "Format" })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	callback = function(event)
+		if vim.bo[event.buf].buftype ~= "" then
+			vim.keymap.set("n", "q", "<cmd>close<CR>", { buffer = event.buf, silent = true })
+		end
+	end,
+})

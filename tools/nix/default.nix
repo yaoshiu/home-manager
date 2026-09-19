@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   nix = {
-    package = pkgs.nix;
+    package = pkgs.lix;
     gc.automatic = true;
     settings = {
       max-jobs = "auto";

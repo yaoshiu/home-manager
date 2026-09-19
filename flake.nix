@@ -44,6 +44,7 @@
           homeConfigurations =
             let
               common = [
+                ./ai
                 ./tools
                 ./shells
                 ./editors
