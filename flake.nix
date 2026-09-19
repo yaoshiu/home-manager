@@ -62,7 +62,7 @@
               ];
             in
             {
-              macos = withSystem "aarch64-darwin" (
+              "huangyifei@huangyifeis-MacBook-Pro.local" = withSystem "aarch64-darwin" (
                 { pkgs, ... }:
                 home-manager.lib.homeManagerConfiguration {
                   inherit pkgs;
@@ -88,6 +88,7 @@
         perSystem = {
           treefmt = {
             programs.nixfmt.enable = true;
+            programs.stylua.enable = true;
           };
         };
       }
