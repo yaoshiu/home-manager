@@ -1,6 +1,3 @@
-return {
-	spec = { "https://github.com/lukas-reineke/indent-blankline.nvim" },
-	config = function()
-		require("ibl").setup()
-	end,
-}
+require("core.pack").add({ "https://github.com/lukas-reineke/indent-blankline.nvim" })
+
+require("ibl").setup()

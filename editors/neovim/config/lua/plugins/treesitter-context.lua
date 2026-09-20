@@ -1,3 +1,1 @@
-return {
-	spec = { "https://github.com/nvim-treesitter/nvim-treesitter-context" },
-}
+require("core.pack").add({ "https://github.com/nvim-treesitter/nvim-treesitter-context" })

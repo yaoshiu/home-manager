@@ -1,7 +1,4 @@
-return {
-	spec = { "https://github.com/maxmx03/solarized.nvim" },
-	config = function()
-		require("solarized").setup({})
-		vim.cmd.colorscheme("solarized")
-	end,
-}
+require("core.pack").add({ "https://github.com/maxmx03/solarized.nvim" })
+
+require("solarized").setup({})
+vim.cmd.colorscheme("solarized")

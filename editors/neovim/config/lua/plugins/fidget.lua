@@ -1,8 +1,3 @@
-return {
-	spec = {
-		"https://github.com/j-hui/fidget.nvim",
-	},
-	config = function()
-		require("fidget").setup({})
-	end,
-}
+require("core.pack").add({ "https://github.com/j-hui/fidget.nvim" })
+
+require("fidget").setup({})

@@ -1,22 +1,18 @@
-return {
-	spec = {
-		"https://github.com/nvim-mini/mini.icons",
-		"https://github.com/nvim-tree/nvim-web-devicons",
-		"https://github.com/folke/which-key.nvim",
-	},
-	config = function()
-		local wk = require("which-key")
-		wk.setup()
+require("core.pack").add({
+	"https://github.com/nvim-mini/mini.icons",
+	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/folke/which-key.nvim",
+})
 
-		wk.add({
-			{ "<leader>f", group = "Telescope" },
-			{
-				"<leader>?",
-				function()
-					wk.show({ global = false })
-				end,
-				desc = "Buffer local keymaps (which-key)",
-			},
-		})
-	end,
-}
+local keymaps = require("core.keymaps")
+keymaps.setup()
+
+keymaps.add({
+	{
+		"<leader>?",
+		function()
+			require("which-key").show({ global = false })
+		end,
+		desc = "Buffer local keymaps (which-key)",
+	},
+})

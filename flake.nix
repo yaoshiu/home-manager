@@ -17,6 +17,10 @@
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -58,6 +62,7 @@
 
                   nixpkgs.overlays = [
                     inputs.helix.overlays.default
+                    inputs.neovim-nightly-overlay.overlays.default
                   ];
                 }
               ];
