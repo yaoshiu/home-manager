@@ -68,7 +68,7 @@
               ];
             in
             {
-              "huangyifei@huangyifeis-MacBook-Pro.local" = withSystem "aarch64-darwin" (
+              "huangyifei@fayashs-macbook-pro" = withSystem "aarch64-darwin" (
                 { pkgs, ... }:
                 home-manager.lib.homeManagerConfiguration {
                   inherit pkgs;

@@ -1,6 +1,7 @@
-{ ... }:
+{ pkgs, lib, ... }:
 {
   imports = [
+    ./age
     ./nix
     ./ansible
     ./bottom
@@ -18,5 +19,5 @@
     ./starship
     ./tealdeer
     ./zoxide
-  ];
+  ] ++ lib.optional pkgs.stdenv.isDarwin ./container;
 }

@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("themes.solarized")
+
 require("plugins")
 
 local keymaps = require("core.keymaps")
@@ -26,9 +27,10 @@ keymaps.add({
 	{ "<C-j>", "<Cmd>wincmd j<CR>", desc = "Go to the down window", mode = { "n", "t" } },
 	{ "<C-k>", "<Cmd>wincmd k<CR>", desc = "Go to the up window", mode = { "n", "t" } },
 	{ "<C-l>", "<Cmd>wincmd l<CR>", desc = "Go to the right window", mode = { "n", "t" } },
-	{ "<Esc>", [[<C-\><C-n>]], desc = "Switch to normal mode", mode = { "n", "t" } },
+	{ "<Esc>", [[<C-\><C-n>]], desc = "Switch to normal mode", mode = "t" },
 	{ ">", ">gv", desc = "Indent right", mode = "x" },
 	{ "<", "<gv", desc = "Indent left", mode = "x" },
+	{ "<leader>d", "<C-w>d", desc = "Show diagnostics under the cursor", mode = "n" },
 	{ "<leader>-", "<Cmd>split<CR>", desc = "Horizontally split window" },
 	{ "<leader>\\", "<Cmd>vsplit<CR>", desc = "Vertically split window" },
 	{ "<leader>q", "<Cmd>bp | bd #<CR>", desc = "Close current buffer" },
@@ -54,7 +56,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd("BufWinEnter", {
 	callback = function(event)
 		if vim.bo[event.buf].buftype ~= "" then
 			keymaps.add({ { "q", "<cmd>close<CR>", mode = "n", buffer = event.buf, silent = true } })

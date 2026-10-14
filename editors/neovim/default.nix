@@ -14,6 +14,9 @@
       nixfmt
       rust-analyzer
       stylua
+      bash-language-server
+      shellcheck
+      shfmt
     ];
   };
   xdg.configFile.nvim = {

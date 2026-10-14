@@ -2,8 +2,8 @@ require("core.pack").add({ "https://github.com/nvim-treesitter/nvim-treesitter" 
 
 vim.api.nvim_create_autocmd("FileType", {
 	callback = function(ev)
-		local has_parser = pcall(vim.treesitter.start, ev.buf)
-		if not has_parser then
+		local ok = pcall(vim.treesitter.start, ev.buf)
+		if not ok then
 			return
 		end
 

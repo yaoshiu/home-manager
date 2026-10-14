@@ -2,7 +2,6 @@
 {
   programs.helix = {
     enable = true;
-    defaultEditor = true;
     settings = {
       theme = {
         light = "solarized_light";
