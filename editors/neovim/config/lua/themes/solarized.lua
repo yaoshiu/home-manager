@@ -1,5 +1,12 @@
-require("core.pack").add({ "https://github.com/maxmx03/solarized.nvim" })
+require("core.pack").add({
+	{
+		src = "https://github.com/maxmx03/solarized.nvim",
+		data = {
+			config = function()
+				require("solarized").setup({})
 
-require("solarized").setup({})
-
-vim.cmd.colorscheme("solarized")
+				vim.cmd.colorscheme("solarized")
+			end,
+		},
+	},
+})

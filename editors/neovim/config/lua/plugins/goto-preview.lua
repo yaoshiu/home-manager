@@ -1,6 +1,11 @@
 require("core.pack").add({
 	"https://github.com/rmagatti/logger.nvim",
-	"https://github.com/rmagatti/goto-preview",
+	{
+		src = "https://github.com/rmagatti/goto-preview",
+		data = {
+			config = function()
+				require("goto-preview").setup({})
+			end,
+		},
+	},
 })
-
-require("goto-preview").setup({})

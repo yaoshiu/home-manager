@@ -1,5 +1,12 @@
-require("core.pack").add({ "https://github.com/windwp/nvim-autopairs" })
-
-require("nvim-autopairs").setup({
-	map_cr = true,
+require("core.pack").add({
+	{
+		src = "https://github.com/windwp/nvim-autopairs",
+		data = {
+			config = function()
+				require("nvim-autopairs").setup({
+					map_cr = true,
+				})
+			end,
+		},
+	},
 })

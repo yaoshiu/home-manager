@@ -5,6 +5,9 @@
     withPython3 = true;
     withRuby = true;
     extraPackages = with pkgs; [
+      gcc
+      gnumake
+      fzf
       luarocks
       tree-sitter
       lua-language-server

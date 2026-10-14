@@ -5,6 +5,8 @@ require("themes.solarized")
 
 require("plugins")
 
+require("core.pack").load()
+
 local keymaps = require("core.keymaps")
 
 vim.opt.expandtab = true
