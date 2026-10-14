@@ -1,4 +1,3 @@
-{ pkgs, lib, ... }:
 {
   imports = [
     ./age
@@ -19,5 +18,6 @@
     ./starship
     ./tealdeer
     ./zoxide
-  ] ++ lib.optional pkgs.stdenv.isDarwin ./container;
+    ./container
+  ];
 }
