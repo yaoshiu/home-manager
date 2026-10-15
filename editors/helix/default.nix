@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
   programs.helix = {
-    enable = true;
+    # TODO: package breaks for now
+    enable = false;
     settings = {
       theme = {
         light = "solarized_light";

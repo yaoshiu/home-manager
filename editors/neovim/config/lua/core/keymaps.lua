@@ -22,7 +22,7 @@ function M.setup()
 	end
 	initialized = true
 
-    local which_key = require("which-key")
+	local which_key = require("which-key")
 	which_key.setup()
 
 	for _, spec in ipairs(pending) do
