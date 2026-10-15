@@ -9,7 +9,7 @@ require("core.pack").add({
 					{
 						"<leader>r",
 						function()
-							return "<Cmd>IncRename " .. vim.fn.expand("<cword>")
+							return ":IncRename " .. vim.fn.expand("<cword>")
 						end,
 						desc = "IncRename",
 						mode = "n",
