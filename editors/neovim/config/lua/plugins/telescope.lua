@@ -7,13 +7,16 @@ require("core.pack").add({
 		},
 		src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 	},
+    "https://github.com/nvim-telescope/telescope-ui-select.nvim",
 	{
 		src = "https://github.com/nvim-telescope/telescope.nvim",
 		version = vim.version.range("*"),
 		data = {
 			config = function()
 				local builtin = require("telescope.builtin")
-				require("telescope").load_extension("fzf")
+                local telescope = require("telescope")
+				telescope.load_extension("fzf")
+                telescope.load_extension("ui-select")
 
 				local keymaps = require("core.keymaps")
 				keymaps.add({ { "<leader>f", group = "Telescope" } })

@@ -3,6 +3,7 @@ local M = {}
 local pending = {}
 local initialized = false
 
+--- @param spec wk.Spec 
 function M.add(spec)
 	if initialized then
 		require("which-key").add(spec)

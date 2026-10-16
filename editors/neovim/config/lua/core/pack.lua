@@ -27,7 +27,8 @@ function M.setup()
 	})
 end
 
--- Register declarations and defer configuration until every plugin is available.
+--- Register declarations and defer configuration until every plugin is available.
+--- @param plugins (string|vim.pack.Spec)[]
 function M.add(plugins)
 	assert(not loaded, "Register plugins before core.pack.load()")
 	for _, spec in ipairs(plugins) do

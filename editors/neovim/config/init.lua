@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-require("themes.solarized")
+require("themes.zenbones")
 
 require("plugins")
 
@@ -19,9 +19,33 @@ vim.opt.foldlevelstart = 99
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+vim.opt.confirm = true
 
 vim.diagnostic.config({
 	virtual_text = true,
+})
+
+local inlay_hint_augroup = vim.api.nvim_create_augroup("AutoInlayHints", { clear = true })
+vim.api.nvim_create_autocmd("InsertEnter", {
+    group = inlay_hint_augroup,
+    callback = function()
+        local bufnr = vim.api.nvim_get_current_buf()
+        if vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr }) then
+            vim.b[bufnr].inlay_hint_active = true
+            vim.lsp.inlay_hint.enable(false, { bufnr = bufnr })
+        end
+    end
+})
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+    group = inlay_hint_augroup,
+    callback = function()
+        local bufnr = vim.api.nvim_get_current_buf()
+        if vim.b[bufnr].inlay_hint_active then
+            vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+            vim.b[bufnr].inlay_hint_active = false
+        end
+    end
 })
 
 keymaps.add({
@@ -48,7 +72,7 @@ keymaps.add({
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		keymaps.add({
-			{ "<leader>ca", vim.lsp.buf.code_action, desc = "Lsp code actions", mode = { "n", "v" }, buffer = ev.buf },
+			{ "<leader>a", vim.lsp.buf.code_action, desc = "Lsp code actions", mode = { "n", "v" }, buffer = ev.buf },
 		})
 
 		local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
