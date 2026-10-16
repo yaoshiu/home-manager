@@ -5,7 +5,7 @@
     package = if pkgs.stdenv.hostPlatform.isDarwin then pkgs.ghostty-bin else pkgs.ghostty;
     settings = {
       font-size = 14;
-      font-family = "Hack Nerd Font Mono";
+      font-family = "JetBrainsMono Nerd Font Mono";
       command = "direct:zsh -lic fish";
       theme = "Zenbones";
       window-padding-x = 16;
@@ -22,5 +22,7 @@
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     nerd-fonts.hack
+    nerd-fonts.jetbrains-mono
+    monaspace
   ];
 }

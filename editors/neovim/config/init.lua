@@ -61,6 +61,7 @@ keymaps.add({
 		end,
 		desc = "Format",
 	},
+    {"<Esc>", "<Cmd>nohlsearch<CR>", mode = "n"}
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
