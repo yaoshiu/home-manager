@@ -29,10 +29,8 @@ local inlay_hint_augroup = vim.api.nvim_create_augroup("AutoInlayHints", { clear
 vim.api.nvim_create_autocmd("InsertEnter", {
     group = inlay_hint_augroup,
     callback = function()
-        local bufnr = vim.api.nvim_get_current_buf()
-        if vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr }) then
-            vim.b[bufnr].inlay_hint_active = true
-            vim.lsp.inlay_hint.enable(false, { bufnr = bufnr })
+        if vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }) then
+            vim.lsp.inlay_hint.enable(false)
         end
     end
 })
@@ -40,11 +38,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 vim.api.nvim_create_autocmd("InsertLeave", {
     group = inlay_hint_augroup,
     callback = function()
-        local bufnr = vim.api.nvim_get_current_buf()
-        if vim.b[bufnr].inlay_hint_active then
-            vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-            vim.b[bufnr].inlay_hint_active = false
-        end
+        vim.lsp.inlay_hint.enable(true)
     end
 })
 
@@ -56,7 +50,7 @@ keymaps.add({
 	{ "<Esc>", [[<C-\><C-n>]], desc = "Switch to normal mode", mode = "t" },
 	{ ">", ">gv", desc = "Indent right", mode = "x" },
 	{ "<", "<gv", desc = "Indent left", mode = "x" },
-	{ "<leader>d", "<C-w>d", desc = "Show diagnostics under the cursor", mode = "n" },
+	{ "<leader>d", vim.diagnostic.open_float, desc = "Show diagnostics under the cursor", mode = "n" },
 	{ "<leader>-", "<Cmd>split<CR>", desc = "Horizontally split window" },
 	{ "<leader>\\", "<Cmd>vsplit<CR>", desc = "Vertically split window" },
 	{ "<leader>q", "<Cmd>bp | bd #<CR>", desc = "Close current buffer" },
