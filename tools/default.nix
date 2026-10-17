@@ -19,5 +19,6 @@
     ./tealdeer
     ./zoxide
     ./container
+    ./chafa
   ];
 }
