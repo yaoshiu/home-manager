@@ -20,5 +20,6 @@
     ./zoxide
     ./container
     ./chafa
+    ./npm
   ];
 }
