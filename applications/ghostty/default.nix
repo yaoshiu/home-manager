@@ -6,7 +6,7 @@
     settings = {
       font-size = 14;
       font-family = "JetBrainsMono Nerd Font Mono";
-      command = "direct:zsh -lic fish";
+      command = "zsh -lic fish";
       theme = "light:Zenbones Light,dark:Zenbones Dark";
       window-padding-x = 16;
       window-padding-y = 16;

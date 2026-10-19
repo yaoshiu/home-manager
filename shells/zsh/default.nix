@@ -9,10 +9,10 @@
     autosuggestion = {
       enable = true;
     };
+    profileExtra = ''
+      . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+    '';
     initContent = lib.mkMerge [
-      (lib.mkBefore ''
-        . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-      '')
       (lib.mkAfter ''
         CURSOR_BLOCK=$'\e[1 q'
         CURSOR_BAR=$'\e[5 q'
