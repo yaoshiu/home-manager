@@ -22,24 +22,24 @@ vim.opt.cursorline = true
 vim.opt.confirm = true
 
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_lines = true,
 })
 
 local inlay_hint_augroup = vim.api.nvim_create_augroup("AutoInlayHints", { clear = true })
 vim.api.nvim_create_autocmd("InsertEnter", {
-    group = inlay_hint_augroup,
-    callback = function()
-        if vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }) then
-            vim.lsp.inlay_hint.enable(false)
-        end
-    end
+	group = inlay_hint_augroup,
+	callback = function()
+		if vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }) then
+			vim.lsp.inlay_hint.enable(false)
+		end
+	end,
 })
 
 vim.api.nvim_create_autocmd("InsertLeave", {
-    group = inlay_hint_augroup,
-    callback = function()
-        vim.lsp.inlay_hint.enable(true)
-    end
+	group = inlay_hint_augroup,
+	callback = function()
+		vim.lsp.inlay_hint.enable(true)
+	end,
 })
 
 keymaps.add({
@@ -61,7 +61,7 @@ keymaps.add({
 		end,
 		desc = "Format",
 	},
-    {"<Esc>", "<Cmd>nohlsearch<CR>", mode = "n"}
+	{ "<Esc>", "<Cmd>nohlsearch<CR>", mode = "n" },
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
