@@ -87,12 +87,12 @@
                 }
               );
 
-              "fayash@ip-172-31-36-16.ap-southeast-1.compute.internal" = withSystem "x86_64-linux" (
+              "fayash" = withSystem "x86_64-linux" (
                 { pkgs, ... }:
                 home-manager.lib.homeManagerConfiguration {
                   inherit pkgs;
                   modules = common ++ [
-                    ./aws.nix
+                    ./linux.nix
                   ];
                 }
               );

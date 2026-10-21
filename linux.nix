@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 
 {
+  nix = {
+    # Home Manager uses this package only to validate the user nix.conf.
+    # NixOS manages the installed Nix, daemon, build limits and features.
+    package = pkgs.nix;
+    gc.automatic = false;
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "fayash";

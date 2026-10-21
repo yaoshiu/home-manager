@@ -1,6 +1,19 @@
 { config, pkgs, ... }:
 
 {
+  # Manage user-side Nix configuration and scheduled GC on macOS.
+  nix = {
+    package = pkgs.nix;
+    gc.automatic = true;
+    settings = {
+      max-jobs = "auto";
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "huangyifei";
