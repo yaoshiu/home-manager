@@ -21,6 +21,10 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    keytao-rime = {
+      url = "github:yaoshiu/KeyTao";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -29,6 +33,7 @@
       flake-parts,
       home-manager,
       treefmt-nix,
+      keytao-rime,
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } (
@@ -48,6 +53,8 @@
           homeConfigurations =
             let
               common = [
+                keytao-rime.homeManagerModules.default
+                
                 ./tools
                 ./shells
                 ./editors
@@ -63,6 +70,8 @@
                     inputs.helix.overlays.default
                     inputs.neovim-nightly-overlay.overlays.default
                   ];
+                  
+                  programs.rime-keytao.enable = true;
                 }
               ];
             in
