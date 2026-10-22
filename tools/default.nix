@@ -21,5 +21,6 @@
     ./container
     ./chafa
     ./npm
+    ./clip
   ];
 }

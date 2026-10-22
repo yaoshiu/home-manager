@@ -2,5 +2,10 @@
 {
   programs.lazygit = {
     enable = true;
+    settings = {
+      os.copyToClipboardCmd = ''
+        printf "\033]52;c;$(printf {{text}} | base64 -w 0)\a" > /dev/tty
+      '';
+    };
   };
 }
