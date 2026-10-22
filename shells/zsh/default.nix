@@ -9,9 +9,6 @@
     autosuggestion = {
       enable = true;
     };
-    profileExtra = ''
-      . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-    '';
     initContent = lib.mkMerge [
       (lib.mkAfter ''
         CURSOR_BLOCK=$'\e[1 q'
