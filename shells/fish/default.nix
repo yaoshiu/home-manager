@@ -2,7 +2,6 @@
 {
   programs.fish = {
     enable = true;
-    preferAbbrs = true;
     shellAbbrs = {
       cmd = "command";
     };
