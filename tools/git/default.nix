@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       user.name = "Fay Ash";
-      user.email = "akafayash@icloud.com";
+      user.email = "root@fayash.me";
     };
   };
 }
