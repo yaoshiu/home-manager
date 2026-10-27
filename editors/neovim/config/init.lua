@@ -22,7 +22,7 @@ vim.opt.cursorline = true
 vim.opt.confirm = true
 
 vim.diagnostic.config({
-	virtual_lines = true,
+    virtual_text = true
 })
 
 local inlay_hint_augroup = vim.api.nvim_create_augroup("AutoInlayHints", { clear = true })
