@@ -4,7 +4,6 @@ require("core.pack").add({
 		data = {
 			config = function()
 				require("solarized-osaka").setup({})
-				vim.cmd.colorscheme("solarized-osaka")
 			end,
 		},
 	},

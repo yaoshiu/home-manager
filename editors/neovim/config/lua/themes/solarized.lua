@@ -4,8 +4,6 @@ require("core.pack").add({
 		data = {
 			config = function()
 				require("solarized").setup({})
-
-				vim.cmd.colorscheme("solarized")
 			end,
 		},
 	},

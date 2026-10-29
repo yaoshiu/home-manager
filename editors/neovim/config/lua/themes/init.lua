@@ -1,0 +1,5 @@
+require("themes.flexoki")
+require("themes.solarized")
+require("themes.tokyonight")
+require("themes.zenbones")
+require("themes.solarized-osaka")

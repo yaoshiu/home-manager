@@ -1,11 +1,13 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-require("themes.zenbones")
+require("themes")
 
 require("plugins")
 
 require("core.pack").load()
+
+vim.cmd.colorscheme("zenbones")
 
 local keymaps = require("core.keymaps")
 
@@ -22,7 +24,7 @@ vim.opt.cursorline = true
 vim.opt.confirm = true
 
 vim.diagnostic.config({
-    virtual_text = true
+	virtual_text = true,
 })
 
 local inlay_hint_augroup = vim.api.nvim_create_augroup("AutoInlayHints", { clear = true })
@@ -62,6 +64,8 @@ keymaps.add({
 		desc = "Format",
 	},
 	{ "<Esc>", "<Cmd>nohlsearch<CR>", mode = "n" },
+	{ "H", "[b", desc = "Go to previous buffer", mode = { "n", "t" } },
+	{ "L", "]b", desc = "Go to next buffer", mode = { "n", "t" } },
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {

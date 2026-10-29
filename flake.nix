@@ -54,7 +54,7 @@
             let
               common = [
                 keytao-rime.homeManagerModules.default
-                
+
                 ./tools
                 ./shells
                 ./editors
@@ -70,7 +70,7 @@
                     inputs.helix.overlays.default
                     inputs.neovim-nightly-overlay.overlays.default
                   ];
-                  
+
                   programs.rime-keytao.enable = true;
                 }
               ];
