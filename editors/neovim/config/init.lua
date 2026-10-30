@@ -64,8 +64,8 @@ keymaps.add({
 		desc = "Format",
 	},
 	{ "<Esc>", "<Cmd>nohlsearch<CR>", mode = "n" },
-	{ "H", "[b", desc = "Go to previous buffer", mode = { "n", "t" } },
-	{ "L", "]b", desc = "Go to next buffer", mode = { "n", "t" } },
+	{ "H", "<cmd>bprev<CR>", desc = "Go to previous buffer", mode = { "n", "t" } },
+	{ "L", "<cmd>bnext<CR>", desc = "Go to next buffer", mode = { "n", "t" } },
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
