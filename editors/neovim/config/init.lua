@@ -22,6 +22,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.confirm = true
+vim.opt.showmode = false
 
 vim.diagnostic.config({
 	virtual_text = true,

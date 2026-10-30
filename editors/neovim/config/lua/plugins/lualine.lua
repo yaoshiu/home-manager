@@ -9,6 +9,17 @@ require("core.pack").add({
 						component_separators = { left = "|", right = "|" },
 						section_separators = { left = "", right = "" },
 					},
+					sections = {
+						lualine_z = {
+							"location",
+							{
+								function()
+									return os.date("%H:%M")
+								end,
+								icon = "",
+							},
+						},
+					},
 				})
 			end,
 		},
