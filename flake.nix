@@ -55,6 +55,7 @@
               common = [
                 keytao-rime.homeManagerModules.default
 
+                ./common.nix
                 ./tools
                 ./shells
                 ./editors

@@ -22,5 +22,6 @@
     ./chafa
     ./npm
     ./clip
+    ./glab
   ];
 }
