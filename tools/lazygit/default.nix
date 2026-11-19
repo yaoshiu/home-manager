@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   programs.lazygit = {
     enable = true;
@@ -6,6 +6,12 @@
       os.copyToClipboardCmd = ''
         printf "\033]52;c;$(printf {{text}} | base64 -w 0)\a" > /dev/tty
       '';
+      git.diffRenderers = lib.mkBefore [
+        {
+          type = "rawGit";
+          name = "default";
+        }
+      ];
     };
   };
 }

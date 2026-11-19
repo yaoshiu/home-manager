@@ -6,5 +6,8 @@
       user.name = "Fay Ash";
       user.email = "root@fayash.me";
     };
+    attributes = [
+      "*.rs diff=rust"
+    ];
   };
 }

@@ -23,5 +23,6 @@
     ./npm
     ./clip
     ./glab
+    ./difftastic
   ];
 }
